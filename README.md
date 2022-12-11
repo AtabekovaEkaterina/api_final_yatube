@@ -9,7 +9,7 @@ api final
 Эндпоинт /follow/ - возможен поиск по подпискам по параметру search.<br>
 Примеры возможных запросов:<br> 
 - GET http://127.0.0.1:8000/api/v1/posts/{id}/<br> 
-Responses 200:<br> 
+<details><summary>Response 200</summary> 
 {<br>
   "id": 0,<br>
   "author": "string",<br>
@@ -17,16 +17,16 @@ Responses 200:<br>
   "pub_date": "2019-08-24T14:15:22Z",<br>
   "image": "string",<br>
   "group": 0<br>
-}<br>
-Responses 404:<br> 
+}
+</details>
+<details><summary>Response 404</summary> 
 {<br>
   "detail": "Страница не найдена."<br>
 }
+</details>
 ### Технологии
-Python 3.9
-![image](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)<br/>
-Django 3.2
-![image](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)
+![image](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) Python 3.9<br/>
+![image](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green) Django 3.2
 ### Запуск проекта в dev-режиме
 - Клонируйте репозиторий
 ```
