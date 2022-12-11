@@ -1,4 +1,3 @@
-from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
 
 from rest_framework import filters, mixins, pagination, viewsets
@@ -8,8 +7,6 @@ from api.permissions import IsAuthorOrReadOnly
 from api.serializers import (CommentSerializer, FollowSerializer,
                              GroupSerializer, PostSerializer)
 from posts.models import Follow, Group, Post
-
-User = get_user_model()
 
 
 class CreateListViewSet(mixins.CreateModelMixin,
