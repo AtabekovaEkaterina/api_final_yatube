@@ -8,8 +8,10 @@ api final
 (параметр limit) и с какого по счёту объекта начать отсчёт (параметр offset).<br>
 Эндпоинт /follow/ - возможен поиск по подпискам по параметру search.<br>
 ### Примеры возможных запросов
-Получение публикации по id<br>
-GET http://127.0.0.1:8000/api/v1/posts/{id}/<br> 
+- Получение публикации по id<br>
+```
+GET http://127.0.0.1:8000/api/v1/posts/{id}/
+``` 
 <details><summary>Response 200</summary> 
 {<br>
   "id": 0,<br>
@@ -25,8 +27,10 @@ GET http://127.0.0.1:8000/api/v1/posts/{id}/<br>
   "detail": "Страница не найдена."<br>
 }
 </details>
-Получение информации о сообществе по id<br>
-GET http://127.0.0.1:8000/api/v1/groups/{id}/<br>
+- Получение информации о сообществе по id
+```
+GET http://127.0.0.1:8000/api/v1/groups/{id}/
+```
 <details><summary>Response 200</summary>
 {<br>
   "id": 0,<br>
@@ -40,8 +44,10 @@ GET http://127.0.0.1:8000/api/v1/groups/{id}/<br>
   "detail": "Страница не найдена."<br>
 }
 </details>
-Возвращает все подписки пользователя, сделавшего запрос<br>
+- Возвращает все подписки пользователя, сделавшего запрос
+```
 GET http://127.0.0.1:8000/api/v1/follow/<br>
+```
 <details><summary>Response 200</summary>
 {<br>
   "user": "string",<br>
