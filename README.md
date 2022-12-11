@@ -48,7 +48,7 @@ http://127.0.0.1:8000/api/v1/groups/{id}/
 
 - GET возвращает все подписки пользователя, сделавшего запрос
 ```
-http://127.0.0.1:8000/api/v1/follow/<br>
+http://127.0.0.1:8000/api/v1/follow/
 ```
 <details><summary>Response 200</summary>
 {<br>
