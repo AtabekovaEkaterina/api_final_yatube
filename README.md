@@ -7,8 +7,9 @@ api final
 с пагинацией. Вы можете самостоятельно определять, какое число объектов вернётся<br>
 (параметр limit) и с какого по счёту объекта начать отсчёт (параметр offset).<br>
 Эндпоинт /follow/ - возможен поиск по подпискам по параметру search.<br>
-Примеры возможных запросов:<br> 
-- GET http://127.0.0.1:8000/api/v1/posts/{id}/<br> 
+<p>Примеры возможных запросов:<br> 
+  - Получение публикации по id<br>
+    GET http://127.0.0.1:8000/api/v1/posts/{id}/<br> 
 <details><summary>Response 200</summary> 
 {<br>
   "id": 0,<br>
@@ -24,9 +25,40 @@ api final
   "detail": "Страница не найдена."<br>
 }
 </details>
+  - Получение информации о сообществе по id<br>
+    GET http://127.0.0.1:8000/api/v1/groups/{id}/<br>
+<details><summary>Response 200</summary>
+{<br>
+  "id": 0,<br>
+  "title": "string",<br>
+  "slug": "string",<br>
+  "description": "string"<br>
+}
+</details>
+<details><summary>Response 404</summary>
+{<br>
+  "detail": "Страница не найдена."<br>
+}
+</details>
+  - Возвращает все подписки пользователя, сделавшего запрос<br>
+    GET http://127.0.0.1:8000/api/v1/follow/<br>
+<details><summary>Response 200</summary>
+{<br>
+  "user": "string",<br>
+  "following": "string"<br>
+}
+</details>
+<details><summary>Response 401</summary>
+{<br>
+  "detail": "Учетные данные не были предоставлены."<br>
+}
+</details>
+</p>
 ### Технологии
-![image](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue) Python 3.9<br/>
-![image](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green) Django 3.2
+![image](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
+Python 3.9<br/>
+![image](https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=green)
+Django 3.2
 ### Запуск проекта в dev-режиме
 - Клонируйте репозиторий
 ```
